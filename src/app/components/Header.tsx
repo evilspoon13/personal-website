@@ -16,13 +16,13 @@ const Header: React.FC = () => {
         <nav className="nav">
           <ul>
             <li>
-                <Link href="/">Home</Link>
+                <Link href="/">home()</Link>
             </li>
             <li>
-                <Link href="/about">About</Link>
+                <Link href="/about">about()</Link>
             </li>
             <li>
-                <Link href="/projects">Projects</Link>
+                <Link href="/projects">projects()</Link>
             </li>
           </ul>
         </nav>
