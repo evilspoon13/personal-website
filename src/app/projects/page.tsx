@@ -113,7 +113,7 @@ const Projects: React.FC = () => {
         <section className="projects-section function-block">
           <h2 className="function-name">currentInterests {'{'}</h2>
           <div className="function-content">
-              <p>Currently learning about computer architecture and assembly language (ARMV8), operating systems, and networking. Feel free to reach out to work on an open-source project. Participated in Build4Good 2024 @ TAMU and placed in the top 5!</p>
+              <p>Currently learning about computer architecture and assembly language (ARMV8), operating systems, and networking. Feel free to reach out to work on an open-source project!</p>
           </div>
           <div className="function-end">{'}'}</div>
         </section>
