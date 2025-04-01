@@ -2,7 +2,8 @@
 
 import React, { useRef } from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
-import './About.css';
+import '../About.css';
+import ConnectCard from '../components/ConnectCard';
 
 const About: React.FC = () => {
   // Create refs for animated sections
@@ -66,6 +67,7 @@ const About: React.FC = () => {
                 </div>
               </div>
               
+
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-date">Jun 2024 - Jul 2024</div>
@@ -82,26 +84,10 @@ const About: React.FC = () => {
           <div className="function-end">{'}'}</div>
         </section>
         
-        <section ref={connectRef} className="about-section function-block">
-          <h2 className="function-name">connect {'{'}</h2>
-          <div className="function-content">
-            <div className="contact-links">
-              <a href="https://github.com/cameron28202" target="_blank" rel="noopener noreferrer" className="contact-link">
-                <i className="fab fa-github"></i>
-                <span>GitHub</span>
-              </a>
-              <a href="https://linkedin.com/in/cameronwstone" target="_blank" rel="noopener noreferrer" className="contact-link">
-                <i className="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-              </a>
-              <a href="mailto:cameron28202@gmail.com" className="contact-link">
-                <i className="fas fa-envelope"></i>
-                <span>Email</span>
-              </a>
-            </div>
-          </div>
-          <div className="function-end">{'}'}</div>
-        </section>
+        <ConnectCard 
+                connectRef={connectRef}
+              
+              />
       </div>
     </div>
   );
