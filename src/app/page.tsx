@@ -9,7 +9,6 @@ import useScrollAnimation from './hooks/useScrollAnimation';
 import ConnectCard from './components/ConnectCard';
 
 const Home: React.FC = () => {
-  const [isClient, setIsClient] = useState(false);
   
   const facts = [
     "CPEN @ TAMU",
@@ -26,10 +25,6 @@ const Home: React.FC = () => {
   const navSectionRef = useRef<HTMLDivElement>(null);
   
   useScrollAnimation([socialTrayRef, navSectionRef]);
-  
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   // Function to scroll to social tray
   const scrollToSocialTray = () => {
