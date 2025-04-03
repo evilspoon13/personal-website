@@ -216,6 +216,7 @@
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
   color: var(--white-color);
+
 }
 
 .nav-text p {
@@ -314,4 +315,5 @@
   .social-link {
     width: 100%;
   }
+  
 }
