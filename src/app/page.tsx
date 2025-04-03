@@ -10,7 +10,7 @@ import ConnectCard from './components/ConnectCard';
 const Home: React.FC = () => {
   
   const facts = [
-    "CPEN @ TAMU",
+    "Computer Engineering @ TAMU",
     "Software Engineer",
     "T-Mobile SWE Intern",
     "Brazilian Jiu Jitsu White Belt"
