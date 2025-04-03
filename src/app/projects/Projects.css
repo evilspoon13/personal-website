@@ -207,32 +207,6 @@
   color: var(--white-color);
 }
 
-/* Function Block Styles */
-.function-block {
-  position: relative;
-  padding: 0 0 0 20px;
-}
-
-.function-name {
-  font-family: 'Consolas', 'Monaco', monospace;
-  font-size: 1.6rem;
-  color: var(--text-color);
-  display: flex;
-  align-items: center;
-}
-
-.function-content {
-  padding-left: 20px;
-}
-
-.function-end {
-  font-family: 'Consolas', 'Monaco', monospace;
-  font-size: 1.6rem;
-  color: var(--text-color);
-  margin-top: 20px;
-  padding-left: 0;
-}
-
 /* Add scroll navigation buttons */
 .scroll-controls {
   display: flex;

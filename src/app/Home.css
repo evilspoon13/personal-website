@@ -67,45 +67,6 @@
   }
 }
 
-/* Function Block Styles */
-.function-block {
-  position: relative;
-  padding: 0 0 0 20px;
-}
-
-.home-function {
-  max-width: 800px;
-  width: 100%;
-  min-height: 70vh;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 100px;
-}
-
-.function-name {
-  font-family: 'Consolas', 'Monaco', monospace;
-  font-size: 1.6rem;
-  color: var(--text-color);
-  margin: 0 0 20px;
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-}
-
-.function-content {
-  padding-left: 20px;
-}
-
-.function-end {
-  font-family: 'Consolas', 'Monaco', monospace;
-  font-size: 1.6rem;
-  color: var(--text-color);
-  margin-top: 20px;
-  padding-left: 0;
-}
-
 /* Social Links Tray */
 .social-tray {
   max-width: 800px;
@@ -199,7 +160,6 @@
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease;
-  width: 80%;
   height: 70%;
 }
 

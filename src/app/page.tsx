@@ -74,7 +74,7 @@ const Home: React.FC = () => {
                 <i className="fas fa-code-branch"></i>
               </div>
               <div className="nav-text">
-                <h3>Projects</h3>
+                <p>Projects</p>
               </div>
             </Link>
             <Link href="/about" className="nav-link">
@@ -82,7 +82,7 @@ const Home: React.FC = () => {
                 <i className="fas fa-user"></i>
               </div>
               <div className="nav-text">
-                <h3>About</h3>
+                <p>About</p>
               </div>
             </Link>
           </div>
