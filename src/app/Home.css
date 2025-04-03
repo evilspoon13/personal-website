@@ -81,6 +81,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 100px;
 }
 
 .function-name {
@@ -90,6 +91,7 @@
   margin: 0 0 20px;
   display: flex;
   align-items: center;
+  font-weight: 400;
 }
 
 .function-content {
@@ -197,7 +199,8 @@
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease;
-  width: 100%;
+  width: 80%;
+  height: 70%;
 }
 
 .nav-link:hover {
@@ -219,12 +222,6 @@
 
 }
 
-.nav-text p {
-  font-size: 1rem;
-  color: var(--text-color);
-  opacity: 0.8;
-}
-
 /* Scroll Animation */
 .scroll-fade {
   opacity: 0;
@@ -243,12 +240,12 @@
   align-items: center;
   justify-content: center;
   background: none;
-  border: 2px solid var(--accent-color);
+  border: none;
   color: var(--text-color);
+  border-radius: 50%;
   padding: 10px;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   margin: 10px auto;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -263,6 +260,10 @@
 .scroll-button:hover {
   background-color: var(--accent-color);
   color: var(--bg-color);
+}
+
+.button-section{
+  padding-bottom: 50%;
 }
 
 @keyframes bounce {

@@ -1,4 +1,5 @@
 import React from 'react';
+import './ConnectCard.css';
 
 interface ConnectCardProps {
   connectRef: React.RefObject<HTMLDivElement | null>;

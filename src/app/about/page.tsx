@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
-import '../About.css';
+import './About.css';
 import ConnectCard from '../components/ConnectCard';
 
 const About: React.FC = () => {

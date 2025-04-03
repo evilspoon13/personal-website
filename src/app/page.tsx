@@ -3,7 +3,6 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import './Home.css';
-import './About.css';
 import useTypewriterEffect from './hooks/useTypewriterEffect';
 import useScrollAnimation from './hooks/useScrollAnimation';
 import ConnectCard from './components/ConnectCard';
@@ -52,17 +51,18 @@ const Home: React.FC = () => {
         </div>
 
         {/* Scroll Button */}
-        <button 
-          className="scroll-button fade-in"
-          onClick={scrollToSocialTray}
-        >
-          <i className="fas fa-arrow-down"></i>
-        </button>
+        <div className="button-section">
+          <button 
+            className="scroll-button fade-in"
+            onClick={scrollToSocialTray}
+          >
+            <i className="fas fa-arrow-down"></i>
+          </button>
+        </div>
         
         {/* social tray */}
         <ConnectCard 
-          connectRef={socialTrayRef} 
-          className="scroll-fade" 
+          connectRef={socialTrayRef}
         />
         
         {/* Navigation Section */}
@@ -75,7 +75,6 @@ const Home: React.FC = () => {
               </div>
               <div className="nav-text">
                 <h3>Projects</h3>
-                <p>Check out my work</p>
               </div>
             </Link>
             <Link href="/about" className="nav-link">
@@ -84,7 +83,6 @@ const Home: React.FC = () => {
               </div>
               <div className="nav-text">
                 <h3>About</h3>
-                <p>Learn more about me</p>
               </div>
             </Link>
           </div>

@@ -1,0 +1,35 @@
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1.5rem 0;
+  }
+  
+  .contact-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    width: 150px;
+    text-decoration: none;
+  }
+  
+  .contact-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-link i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--third-color);
+  }
+  
+  .contact-link span {
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
