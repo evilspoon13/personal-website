@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import './Home.css';
 import useTypewriterEffect from './hooks/useTypewriterEffect';
@@ -8,6 +8,22 @@ import useScrollAnimation from './hooks/useScrollAnimation';
 import ConnectCard from './components/ConnectCard';
 
 const Home: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    // Initial check
+    checkMobile();
+    
+    // Add event listener
+    window.addEventListener('resize', checkMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   const facts = [
     "Computer Engineering @ TAMU",
@@ -55,6 +71,7 @@ const Home: React.FC = () => {
           <button 
             className="scroll-button fade-in"
             onClick={scrollToSocialTray}
+            aria-label="Scroll to connect"
           >
             <i className="fas fa-arrow-down"></i>
           </button>
@@ -74,7 +91,7 @@ const Home: React.FC = () => {
                 <i className="fas fa-code-branch"></i>
               </div>
               <div className="nav-text">
-                <p>Projects</p>
+                <p>{isMobile ? "Projects" : "View My Projects"}</p>
               </div>
             </Link>
             <Link href="/about" className="nav-link">
@@ -82,7 +99,7 @@ const Home: React.FC = () => {
                 <i className="fas fa-user"></i>
               </div>
               <div className="nav-text">
-                <p>About</p>
+                <p>{isMobile ? "About" : "About Me"}</p>
               </div>
             </Link>
           </div>

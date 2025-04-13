@@ -252,6 +252,7 @@
   
   .name-display .title {
     font-size: 1.2rem;
+    min-width: unset; 
   }
   
   .function-block {
@@ -280,4 +281,33 @@
     width: 100%;
   }
   
+  .nav-link {
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+  }
+  
+  .nav-icon {
+    font-size: 1.8rem;
+    margin-right: 0.8rem;
+  }
+  
+  .nav-text h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-link {
+    padding: 0.75rem;
+  }
+  
+  .nav-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .nav-text h3 {
+    font-size: 1rem;
+  }
 }
