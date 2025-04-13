@@ -1,3 +1,8 @@
+.connect-card .function-block {
+
+  width: 100%;
+}
+
 .contact-links {
     display: flex;
     justify-content: center;
