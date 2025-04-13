@@ -3,27 +3,12 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import './Home.css';
+import './about/About.css'
 import useTypewriterEffect from './hooks/useTypewriterEffect';
 import useScrollAnimation from './hooks/useScrollAnimation';
 import ConnectCard from './components/ConnectCard';
 
 const Home: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    
-    // Initial check
-    checkMobile();
-    
-    // Add event listener
-    window.addEventListener('resize', checkMobile);
-    
-    // Cleanup
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
   
   const facts = [
     "Computer Engineering @ TAMU",
@@ -91,7 +76,7 @@ const Home: React.FC = () => {
                 <i className="fas fa-code-branch"></i>
               </div>
               <div className="nav-text">
-                <p>{isMobile ? "Projects" : "View My Projects"}</p>
+                <p>Projects</p>
               </div>
             </Link>
             <Link href="/about" className="nav-link">
@@ -99,7 +84,7 @@ const Home: React.FC = () => {
                 <i className="fas fa-user"></i>
               </div>
               <div className="nav-text">
-                <p>{isMobile ? "About" : "About Me"}</p>
+                <p>About Me</p>
               </div>
             </Link>
           </div>
