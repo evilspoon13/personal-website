@@ -32,6 +32,13 @@ const Projects: React.FC = () => {
       ],
     },
     {
+      title: 'Single Cycle Processor',
+      description: 'Designed and implemented a complete single-cycle processor in Verilog, building all essential components (ALU, memory systems, control unit, register file) and successfully integrating them into a fully functional system capable of executing a comprehensive instruction set.',
+      technologies: ['Verilog', 'Computer Architecture', 'ARMv8'],
+      image: '/processor.png',
+      links: [{'name': 'GitHub', 'link': 'https://github.com/cameron28202/ECEN350'}],
+    },
+    {
       title: 'Tidal Hackathon',
       description: 'Participated in the Tidal Hackathon 2024, a two-day hackathon sponsored by Nvidia, AWS and Phillips 66 at Texas A&M. Experimented with a machine learning model for a dynamic speed limit sign.',
       technologies: ['Python', 'Pandas', 'Sklearn'],
