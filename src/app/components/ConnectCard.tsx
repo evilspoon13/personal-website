@@ -12,7 +12,7 @@ export const ConnectCard: React.FC<ConnectCardProps> = ({ connectRef, className 
       <h2 className="function-name">connect {'{'}</h2>
       <div className="function-content">
         <div className="contact-links">
-          <a href="https://github.com/cameron28202" target="_blank" rel="noopener noreferrer" className="contact-link">
+          <a href="https://github.com/evilspoon13" target="_blank" rel="noopener noreferrer" className="contact-link">
             <i className="fab fa-github"></i>
             <span>GitHub</span>
           </a>

@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
       <div className="footer-container">
         <p>© {currentYear} Cam. All rights reserved.</p>
         <div className="footer-links">
-          <a href="https://github.com/cameron28202" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/evilspoon13" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://linkedin.com/in/cameronwstone" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="mailto:cameron28202@gmail.com">Contact</a>
         </div>

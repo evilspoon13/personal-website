@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
       description: 'Website for Texas A&M students to simply enter their courses and instantly get their final exam date/time.',
       technologies: ['React.JS', 'Howdy API'],
       image: '/aggiefinals.png',
-      links: [{'name': 'Live Website', 'link': 'https://aggiefinals.com'}, {'name': 'GitHub', 'link': 'https://github.com/cameron28202/aggie-finals'}],
+      links: [{'name': 'Live Website', 'link': 'https://aggiefinals.com'}, {'name': 'GitHub', 'link': 'https://github.com/evilspoon13/aggie-finals'}],
     },
     {
       title: 'Build4Nurse',
@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
       image: '/build4good.png',
       links: [
         {'name': 'Live Website', 'link': 'https://build4nurse.vercel.app'}, 
-        {'name': 'GitHub', 'link': 'https://github.com/cameron28202/build4nurse'}
+        {'name': 'GitHub', 'link': 'https://github.com/evilspoon13/build4nurse'}
       ],
     },
     {
@@ -36,7 +36,7 @@ const Projects: React.FC = () => {
       description: 'Designed and implemented a complete single-cycle processor in Verilog, building all essential components (ALU, memory systems, control unit, register file) and successfully integrating them into a fully functional system capable of executing a comprehensive instruction set.',
       technologies: ['Verilog', 'Computer Architecture', 'ARMv8'],
       image: '/processor.png',
-      links: [{'name': 'GitHub', 'link': 'https://github.com/cameron28202/ECEN350'}],
+      links: [{'name': 'GitHub', 'link': 'https://github.com/evilspoon13/ECEN350'}],
     },
     {
       title: 'Tidal Hackathon',
@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
       description: 'As a junior at Texas A&M University, I\'ve taken the following: Data Structures and Algorithms, Object Oriented Programming, Discrete Mathematics, Digital System Design, Electrical Circuit Theory, Linear Algebra, Differential Equations, Computer Architecture and Design, Operating Systems and Network Programming',
       technologies: ['C/C++', 'Java', 'JavaScript', 'ARMv8', 'Verilog'], 
       image: '/tamulogo.png',
-      links: [{'name': 'GitHub', 'link': 'https://github.com/cameron28202/'}]
+      links: [{'name': 'GitHub', 'link': 'https://github.com/evilspoon13/'}]
     }  
   ];
   

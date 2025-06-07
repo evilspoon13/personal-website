@@ -48,7 +48,7 @@ const About: React.FC = () => {
                 <div className="timeline-date">May 2025</div>
                 <div className="timeline-content">
                   <div className="timeline-header">
-                    <h3>Incoming Software Engineer Intern</h3>
+                    <h3>Software Engineer Intern</h3>
                   </div>
                   <p className="timeline-location">T-Mobile, Bellevue, Washington</p>
                   <p className="timeline-description">Developing a full-stack web application to streamline emergency response and enhance communication with law enforcement.</p>
