@@ -8,11 +8,6 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header-container">
-        <div className="logo">
-          <Link href="/">
-            <span className="logo-text">CS</span>
-          </Link>
-        </div>
         <nav className="nav">
           <ul>
             <li>

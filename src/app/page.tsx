@@ -14,7 +14,6 @@ const Home: React.FC = () => {
     "Computer Engineering @ TAMU",
     "Software Engineer",
     "T-Mobile SWE Intern",
-    "Brazilian Jiu Jitsu White Belt"
   ];
   
   const { displayText } = useTypewriterEffect({

@@ -8,23 +8,23 @@ const Projects: React.FC = () => {
 
   const projects = [
     {
+      title: 'Aggie Finals',
+      description: 'Website for Texas A&M students to streamline the process of finding their final exam date/time. Aggie Finals uses the Howdy API to fetch real-time class data and display it in a user-friendly format. Users can log in to save their exam schedule for easy reference.',
+      technologies: ['React.js', 'Spring Boot', 'PostgreSQL', 'Howdy API', 'TypeScript', 'Java'],
+      image: '/aggiefinals.png',
+      links: [{'name': 'Live Website', 'link': 'https://aggiefinals.com'}, {'name': 'GitHub', 'link': 'https://github.com/evilspoon13/aggie-finals'}],
+    },
+    {
       title: 'Aggie Study',
-      description: 'Project Manager for AggieStudy, a full-stack web application aimed at creating a one-stop website for Texas A&M students to study for their exams.',
+      description: 'Project Manager for AggieStudy, a full-stack web application aimed at creating a one-stop website for Texas A&M students to study for their exams. AggieStudy provides a platform for students to access past exams and other study materials, enhancing their exam preparation experience.',
       technologies: ['React.js', 'Spring Boot', 'PostgreSQL', 'JavaScript', 'Java'],
       image: '/aggiestudylogo.png',
       links: [{'name': 'Live Website', 'link': 'https://aggiestudy.com'}, {'name': 'GitHub', 'link': 'https://github.com/aggie-coding-club/AggieStudy'}],
     },
     {
-      title: 'Aggie Finals',
-      description: 'Website for Texas A&M students to simply enter their courses and instantly get their final exam date/time.',
-      technologies: ['React.JS', 'Howdy API'],
-      image: '/aggiefinals.png',
-      links: [{'name': 'Live Website', 'link': 'https://aggiefinals.com'}, {'name': 'GitHub', 'link': 'https://github.com/evilspoon13/aggie-finals'}],
-    },
-    {
       title: 'Build4Nurse',
       description: 'A hands-free data entry solution for healthcare workers that placed in the top 5 at Build4Good Hackathon 2025. Build4Nurse uses voice commands to streamline data entry, reducing the 27% of time nurses spend on documentation so they can focus more on patient care.',
-      technologies: ['React.js', 'HAPI FHIR API', 'Vercel'],
+      technologies: ['React.js', 'HAPI FHIR API'],
       image: '/build4good.png',
       links: [
         {'name': 'Live Website', 'link': 'https://build4nurse.vercel.app'}, 

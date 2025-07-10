@@ -26,9 +26,9 @@ const About: React.FC = () => {
           <h2 className="function-name">about {'{'}</h2>
           <div className="function-content">
             <p>
-              Hey! I&apos;m Cam, a Junior at Texas A&amp;M University pursuing a Bachelor&apos;s degree in Computer Engineering with a minor in Mathematics. 
-              I&apos;m passionate about learning, specifically in AI and machine learning. I have over 6 months of internship experience in the field 
-              of software engineering, and I&apos;m actively seeking new opportunities.
+              Hey! I&apos;m Cam, a senior at Texas A&amp;M University pursuing a bachelor&apos;s degree in computer engineering  with a minor in Mathematics. 
+              I&apos;m passionate about learning and I have over 6 months of internship experience in the field 
+              of software engineering. I&apos;m actively seeking new opportunities.
             </p>
             <p>
               My passion for engineering was sparked when I was hooked on Minecraft. I taught myself the basics of programming with YouTube 
