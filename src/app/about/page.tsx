@@ -26,7 +26,7 @@ const About: React.FC = () => {
           <h2 className="function-name">about {'{'}</h2>
           <div className="function-content">
             <p>
-              Hey! I&apos;m Cam, a senior at Texas A&amp;M University pursuing a bachelor&apos;s degree in computer engineering  with a minor in Mathematics. 
+              Hey! I&apos;m Cam, a senior at Texas A&amp;M University pursuing a bachelor&apos;s degree in computer engineering  with a minor in mathematics. 
               I&apos;m passionate about learning and I have over 6 months of internship experience in the field 
               of software engineering. I&apos;m actively seeking new opportunities.
             </p>
@@ -45,16 +45,28 @@ const About: React.FC = () => {
             <div className="timeline">
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
-                <div className="timeline-date">May 2025</div>
+                <div className="timeline-date">May 2025 - Present</div>
                 <div className="timeline-content">
                   <div className="timeline-header">
                     <h3>Software Engineer Intern</h3>
                   </div>
-                  <p className="timeline-location">T-Mobile, Bellevue, Washington</p>
-                  <p className="timeline-description">Developing a full-stack web application to streamline emergency response and enhance communication with law enforcement.</p>
+                  <p className="timeline-location">T-Mobile, Bellevue, Washington / Remote</p>
+                  <p className="timeline-description">Developing a full-stack web application to streamline emergency response and enhance communication with law enforcement. Extended internship through my final year of university, working part time remotely.</p>
                 </div>
               </div>
-              
+
+              <div className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-date">April 2025 - Present</div>
+                <div className="timeline-content">
+                  <div className="timeline-header">
+                    <h3>Software Engineer</h3>
+                  </div>
+                  <p className="timeline-location">Texas A&amp;M Formula SAE Electric Racing Team, College Station, Texas</p>
+                  <p className="timeline-description">Developing firmware for a custom distributed battery management system, ensuring safety and reliability in intense racing conditions.</p>
+                </div>
+              </div>
+                 
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-date">Aug 2024 - Dec 2024</div>
