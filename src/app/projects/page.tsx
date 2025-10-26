@@ -8,6 +8,13 @@ const Projects: React.FC = () => {
 
   const projects = [
     {
+      title: 'Custom Distributed Battery Management System',
+      description: 'A high-performance distributed battery management solution for the Texas A&M Formula SAE Electric race car, managing lithium-ion cells using TI BQ79616 ICs interfaced with an STM32 microcontroller. Implemented multi-protocol communication via UART and CAN bus for vehicle integration.',
+      technologies: ['C', 'STM32', 'CAN', 'UART'],
+      image: '/battery.png',
+      links: []
+    },
+    {
       title: 'Aggie Finals',
       description: 'Website for Texas A&M students to streamline the process of finding their final exam date/time. Aggie Finals uses the Howdy API to fetch real-time class data and display it in a user-friendly format. Users can log in to save their exam schedule for easy reference.',
       technologies: ['React.js', 'Spring Boot', 'PostgreSQL', 'Howdy API', 'TypeScript', 'Java'],
@@ -37,13 +44,6 @@ const Projects: React.FC = () => {
       technologies: ['Verilog', 'Computer Architecture', 'ARMv8'],
       image: '/processor.png',
       links: [{'name': 'GitHub', 'link': 'https://github.com/evilspoon13/ECEN350'}],
-    },
-    {
-      title: 'Tidal Hackathon',
-      description: 'Participated in the Tidal Hackathon 2024, a two-day hackathon sponsored by Nvidia, AWS and Phillips 66 at Texas A&M. Experimented with a machine learning model for a dynamic speed limit sign.',
-      technologies: ['Python', 'Pandas', 'Sklearn'],
-      image: '/tidal.png',
-      links: []
     },
     {
       title: 'Minecraft Server Developer',
@@ -119,14 +119,6 @@ const Projects: React.FC = () => {
                 <i className="fas fa-chevron-right"></i>
               </button>
             </div>
-          </div>
-          <div className="function-end">{'}'}</div>
-        </section>
-
-        <section className="projects-section function-block">
-          <h2 className="function-name">currentInterests {'{'}</h2>
-          <div className="function-content">
-              <p>Currently learning about computer architecture and assembly language (ARMV8), operating systems, and networking. Feel free to reach out to work on an open-source project!</p>
           </div>
           <div className="function-end">{'}'}</div>
         </section>
