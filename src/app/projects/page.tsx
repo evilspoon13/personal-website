@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
       title: 'Custom Distributed Battery Management System',
       description: 'A high-performance distributed battery management solution for the Texas A&M Formula SAE Electric race car, managing lithium-ion cells using TI BQ79616 ICs interfaced with an STM32 microcontroller. Implemented multi-protocol communication via UART and CAN bus for vehicle integration.',
       technologies: ['C', 'STM32', 'CAN', 'UART'],
-      image: '/battery.png',
+      image: '/formulae.avif',
       links: []
     },
     {
