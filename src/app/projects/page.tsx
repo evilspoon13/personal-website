@@ -3,10 +3,35 @@
 import React, { useRef } from 'react';
 import './Projects.css';
 
+// Constellation Logo Component
+function ConstellationLogo({ size = 24 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className="constellationLogo">
+      {/* Stars */}
+      <circle cx="12" cy="4" r="1.5" fill="currentColor" className="logoStar" />
+      <circle cx="4" cy="12" r="1.5" fill="currentColor" className="logoStar" style={{ animationDelay: '0.2s' }} />
+      <circle cx="20" cy="12" r="1.5" fill="currentColor" className="logoStar" style={{ animationDelay: '0.4s' }} />
+      <circle cx="8" cy="20" r="1.5" fill="currentColor" className="logoStar" style={{ animationDelay: '0.6s' }} />
+      <circle cx="16" cy="20" r="1.5" fill="currentColor" className="logoStar" style={{ animationDelay: '0.8s' }} />
+      <circle cx="12" cy="12" r="2" fill="currentColor" className="logoCenterStar" />
+      {/* Connections */}
+      <path d="M12 4L4 12M12 4L20 12M12 4L12 12M4 12L12 12M20 12L12 12M4 12L8 20M20 12L16 20M12 12L8 20M12 12L16 20M8 20L16 20"
+        stroke="currentColor" strokeWidth="1" className="logoLines" />
+    </svg>
+  );
+}
+
 const Projects: React.FC = () => {
   const projectsGridRef = useRef<HTMLDivElement>(null);
 
   const projects = [
+    {
+      title: 'Constellation',
+      description: '1st place winner in the Compute & Cloud Challenge at TAMUhack 26. An AI-native IDE for HPC environments that replaces terminal-heavy workflows with a visual execution graph and natural language interface. Constructs, executes, and debugs parallel workflows deployed on AWS Batch with dynamically scaled EC2 workers.',
+      technologies: ['Next.js', 'TypeScript', 'React', 'AWS Batch', 'EC2', 'S3', 'Gemini', 'Firebase'],
+      image: '/constellation.png',
+      links: [{'name': 'GitHub', 'link': 'https://github.com/aathul-raj/constellation'}, {'name': 'Devpost', 'link': 'https://devpost.com/software/constellation-qcb483?ref_content=user-portfolio&ref_feature=in_progress'}]
+    },
     {
       title: 'Custom Distributed Battery Management System',
       description: 'A high-performance distributed battery management solution for the Texas A&M Formula SAE Electric race car, managing lithium-ion cells using TI BQ79616 ICs interfaced with an STM32 microcontroller. Implemented multi-protocol communication via UART and CAN bus for vehicle integration.',
@@ -85,12 +110,21 @@ const Projects: React.FC = () => {
               {projects.map((project, index) => (
                 <div className="project-item" key={index}>
                   <div className="project-image-container">
-                    <img src={project.image} alt={project.title} />
+                    {project.title === 'Constellation' ? (
+                      <div className="constellation-animation-container">
+                        <ConstellationLogo size={180} />
+                      </div>
+                    ) : (
+                      <img src={project.image} alt={project.title} />
+                    )}
                     <div className="project-image-overlay"></div>
                   </div>
                   <div className="project-content">
                     <div className="project-header">
-                      <h3>{project.title}</h3>
+                      <h3>
+                        {project.title === 'Constellation' && <ConstellationLogo size={28} />}
+                        {project.title}
+                      </h3>
                       <div className="project-links">
                         {project.links.map((link, linkIndex) => (
                           <a href={link.link} key={linkIndex} target="_blank" rel="noopener noreferrer">{link.name}</a>

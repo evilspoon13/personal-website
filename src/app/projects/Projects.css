@@ -325,22 +325,70 @@
   }
 }
 
+/* Constellation Animation Container */
+.constellation-animation-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(26, 54, 93, 0.3), rgba(45, 45, 45, 0.5));
+}
+
+/* Constellation Logo Animations */
+.constellationLogo {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.logoStar {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.logoCenterStar {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.logoLines {
+  opacity: 0.6;
+  animation: fadeLines 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes fadeLines {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
 /* Extra small devices (phones) */
 @media (max-width: 480px) {
   .project-header {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .project-links {
     margin-top: 10px;
     margin-left: 0;
   }
-  
+
   .project-image-container {
     height: 160px;
   }
-  
+
   .projects-section {
     margin-bottom: 40px;
   }
