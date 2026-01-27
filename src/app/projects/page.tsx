@@ -59,7 +59,6 @@ const Projects: React.FC = () => {
       technologies: ['React.js', 'HAPI FHIR API'],
       image: '/build4good.png',
       links: [
-        {'name': 'Live Website', 'link': 'https://build4nurse.vercel.app'}, 
         {'name': 'GitHub', 'link': 'https://github.com/evilspoon13/build4nurse'}
       ],
     },
