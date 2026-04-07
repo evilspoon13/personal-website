@@ -3,13 +3,18 @@ import './ConnectCard.css';
 
 interface ConnectCardProps {
   connectRef: React.RefObject<HTMLDivElement | null>;
-  className?: string; 
+  className?: string;
 }
 
 export const ConnectCard: React.FC<ConnectCardProps> = ({ connectRef, className = '' }) => {
   return (
     <section ref={connectRef} className={`connect-card function-block ${className}`}>
-      <h2 className="function-name">connect {'{'}</h2>
+      <h2 className="function-name">
+        <span className="syntax-type">void</span>
+        <span className="syntax-punctuation">&nbsp;</span>
+        <span className="syntax-function">connect</span>
+        <span className="syntax-punctuation">{'() {'}</span>
+      </h2>
       <div className="function-content">
         <div className="contact-links">
           <a href="https://github.com/evilspoon13" target="_blank" rel="noopener noreferrer" className="contact-link">
@@ -26,7 +31,7 @@ export const ConnectCard: React.FC<ConnectCardProps> = ({ connectRef, className 
           </a>
         </div>
       </div>
-      <div className="function-end">{'}'}</div>
+      <div className="function-end"><span className="syntax-punctuation">{'}'}</span></div>
     </section>
   );
 };

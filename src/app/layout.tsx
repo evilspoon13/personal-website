@@ -3,6 +3,9 @@
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import CodeBackground from './components/CodeBackground';
+import CursorGlow from './components/CursorGlow';
+import LineNumbers from './components/LineNumbers';
 import './globals.css';
 
 export default function RootLayout({
@@ -23,11 +26,16 @@ export default function RootLayout({
         />
       </head>
       <body className="overflow-hidden">
+        <CodeBackground />
+        <CursorGlow />
         <div className="app">
           <Header />
-          <main className="main-content">
-            {children}
-          </main>
+          <div className="editor-layout">
+            <LineNumbers />
+            <main className="main-content editor-content">
+              {children}
+            </main>
+          </div>
           <Footer />
         </div>
       </body>

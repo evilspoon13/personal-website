@@ -6,12 +6,33 @@
 }
 
 :root {
-  --background-color: #2d2d2d; 
+  --background-color: #1e1e1e;
   --text-color: #e0e0e0;
-  --accent-color: #4a86e8; 
-  --third-color: #FF6B6B; 
+  --accent-color: #4a86e8;
+  --third-color: #FF6B6B;
   --white-color: #ffffff;
   --fade-in-duration: 0.8s;
+
+  /* VS Code palette */
+  --editor-bg: #1e1e1e;
+  --sidebar-bg: #252526;
+  --tab-active-bg: #1e1e1e;
+  --tab-inactive-bg: #2d2d2d;
+  --tab-border: #1e1e1e;
+  --status-bar-bg: #007acc;
+  --titlebar-bg: #323233;
+  --line-number-color: #858585;
+  --breadcrumb-color: #969696;
+
+  /* Syntax highlighting */
+  --syntax-keyword: #c586c0;
+  --syntax-string: #ce9178;
+  --syntax-comment: #6a9955;
+  --syntax-function: #dcdcaa;
+  --syntax-variable: #9cdcfe;
+  --syntax-type: #4ec9b0;
+  --syntax-number: #b5cea8;
+  --syntax-punctuation: #d4d4d4;
 }
 
 html,
@@ -22,10 +43,7 @@ body {
 font-family: 'Consolas', 'Monaco', monospace;
   line-height: 1.5;
   color: var(--text-color);
-  background-color: var(--background-color);
-  background-image: radial-gradient(circle at top right, rgba(74, 134, 232, 0.05), transparent 400px), 
-                    radial-gradient(circle at bottom left, rgba(255, 107, 107, 0.05), transparent 400px);
-  background-attachment: fixed;
+  background-color: var(--editor-bg);
 }
 
 .app {
@@ -152,3 +170,107 @@ h1, h2, h3, h4, h5, h6 {
 .mb-3 { margin-bottom: 24px; }
 .mb-4 { margin-bottom: 32px; }
 .mb-5 { margin-bottom: 40px; }
+
+/* Syntax Highlighting Utility Classes */
+.syntax-keyword { color: var(--syntax-keyword); }
+.syntax-function { color: var(--syntax-function); }
+.syntax-string { color: var(--syntax-string); }
+.syntax-comment { color: var(--syntax-comment); font-style: italic; }
+.syntax-variable { color: var(--syntax-variable); }
+.syntax-type { color: var(--syntax-type); }
+.syntax-number { color: var(--syntax-number); }
+.syntax-punctuation { color: var(--syntax-punctuation); }
+
+/* Editor Layout */
+.editor-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.line-gutter {
+  width: 50px;
+  background: var(--editor-bg);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 12px;
+  overflow: hidden;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.line-gutter .line-num {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.8rem;
+  color: var(--line-number-color);
+  line-height: 1.5;
+  height: 21px;
+}
+
+@media (max-width: 768px) {
+  .line-gutter {
+    display: none;
+  }
+}
+
+.editor-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Scroll Animation Variants */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-fade.visible,
+.scroll-slide-left.visible,
+.scroll-slide-right.visible,
+.scroll-scale.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Spring easing variant */
+.spring-animate {
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Stagger support */
+.stagger-children > * {
+  transition-delay: calc(var(--stagger-index, 0) * 80ms);
+}
+
+/* Page transition */
+.page-transition {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.page-transition-exit {
+  opacity: 0;
+  transform: translateY(8px);
+}

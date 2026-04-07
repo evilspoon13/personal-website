@@ -3,74 +3,37 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import './Home.css';
-import './about/About.css'
-import useTypewriterEffect from './hooks/useTypewriterEffect';
 import useScrollAnimation from './hooks/useScrollAnimation';
 import ConnectCard from './components/ConnectCard';
+import Terminal from './components/Terminal';
 
 const Home: React.FC = () => {
-  
-  const facts = [
-    "Computer Engineering @ TAMU",
-    "Software Engineer",
-    "T-Mobile SWE Intern",
-  ];
-  
-  const { displayText } = useTypewriterEffect({
-    texts: facts
-  });
-  
   const socialTrayRef = useRef<HTMLDivElement>(null);
   const navSectionRef = useRef<HTMLDivElement>(null);
-  
+
   useScrollAnimation([socialTrayRef, navSectionRef]);
 
-  // Function to scroll to social tray
-  const scrollToSocialTray = () => {
-    if (socialTrayRef.current) {
-      socialTrayRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-  
   return (
     <div className="home fade-in">
       <div className="home-container">
-        <div className="function-block home-function fade-in">
-          <div className="function-name">intro {'{'}</div>
-          <div className="function-content">
-            <div className="name-display">
-              <div className="first-name">Cam</div>
-              <div className="last-name">Stone</div>
-              <div className="title">
-                <div className="typing-text">{displayText}</div>
-                <span className="cursor"></span>
-              </div>
-            </div>
-          </div>
-          <div className="function-end">{'}'}</div>
+        <div className="hero-section">
+          <Terminal />
         </div>
 
-        {/* Scroll Button */}
-        <div className="button-section">
-          <button 
-            className="scroll-button fade-in"
-            onClick={scrollToSocialTray}
-            aria-label="Scroll to connect"
-          >
-            <i className="fas fa-arrow-down"></i>
-          </button>
-        </div>
-        
+
         {/* social tray */}
-        <ConnectCard 
-          connectRef={socialTrayRef}
-        />
-        
+        <ConnectCard connectRef={socialTrayRef} />
+
         {/* Navigation Section */}
         <div ref={navSectionRef} className="nav-section function-block scroll-fade">
-          <div className="function-name">explore {'{'}</div>
-          <div className="nav-links">
-            <Link href="/projects" className="nav-link">
+          <div className="function-name">
+            <span className="syntax-type">void</span>
+            <span className="syntax-punctuation">&nbsp;</span>
+            <span className="syntax-function">explore</span>
+            <span className="syntax-punctuation">{'() {'}</span>
+          </div>
+          <div className="nav-links stagger-children">
+            <Link href="/projects" className="nav-link" style={{ '--stagger-index': 0 } as React.CSSProperties}>
               <div className="nav-icon">
                 <i className="fas fa-code-branch"></i>
               </div>
@@ -78,7 +41,7 @@ const Home: React.FC = () => {
                 <p>Projects</p>
               </div>
             </Link>
-            <Link href="/about" className="nav-link">
+            <Link href="/about" className="nav-link" style={{ '--stagger-index': 1 } as React.CSSProperties}>
               <div className="nav-icon">
                 <i className="fas fa-user"></i>
               </div>
@@ -87,7 +50,9 @@ const Home: React.FC = () => {
               </div>
             </Link>
           </div>
-          <div className="function-end">{'}'}</div>
+          <div className="function-end">
+            <span className="syntax-punctuation">{'}'}</span>
+          </div>
         </div>
       </div>
     </div>

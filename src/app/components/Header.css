@@ -1,82 +1,161 @@
-.header {
-    padding: 24px 0;
+.vscode-header {
+  flex-shrink: 0;
+}
+
+/* Tab Bar */
+.tab-bar {
+  display: flex;
+  align-items: stretch;
+  background: var(--tab-inactive-bg);
+  height: 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tab-bar-left {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-icon {
+  color: var(--text-color);
+  opacity: 0.6;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar-icon:hover {
+  opacity: 1;
+}
+
+.tabs {
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.82rem;
+  text-decoration: none;
+  white-space: nowrap;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.15s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.tab-active {
+  background: var(--tab-active-bg);
+  color: var(--white-color);
+}
+
+.tab-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-color);
+}
+
+.tab-inactive {
+  background: var(--tab-inactive-bg);
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.tab-inactive:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-color);
+}
+
+.ts-icon {
+  flex-shrink: 0;
+}
+
+.tab-label {
+  line-height: 1;
+}
+
+.tab-close {
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  line-height: 1;
+  margin-left: 4px;
+  color: var(--text-color);
+}
+
+.tab:hover .tab-close {
+  opacity: 0.5;
+}
+
+.tab-close:hover {
+  opacity: 1 !important;
+}
+
+.tab-bar-fill {
+  flex: 1;
+  background: var(--tab-inactive-bg);
+}
+
+/* Breadcrumb Bar */
+.breadcrumb-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 16px 4px 52px;
+  background: var(--editor-bg);
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.breadcrumb-item {
+  color: var(--breadcrumb-color);
+  transition: color 0.15s ease;
+  cursor: default;
+}
+
+.breadcrumb-item:hover {
+  color: var(--text-color);
+}
+
+.breadcrumb-active {
+  color: var(--text-color);
+}
+
+.breadcrumb-separator {
+  color: var(--breadcrumb-color);
+  font-size: 0.85rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tab-bar-left {
+    display: none;
   }
-  
-  .header-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  .breadcrumb-bar {
+    padding-left: 16px;
   }
-  
-  .logo-text {
-    font-size: 1.5rem;
-    font-weight: 500;
-    background: white;
-    background-clip: text;
-    color: transparent;
-    transition: all 0.3s ease;
+
+  .tab {
+    padding: 0 10px;
+    font-size: 0.75rem;
   }
-  
-  .logo-text:hover {
-    text-shadow: 0 0 8px rgba(74, 134, 232, 0.3), 0 0 8px rgba(255, 107, 107, 0.3);
+
+  .tab-close {
+    display: none;
   }
-  
-  .nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav li {
-    margin-left: 32px;
-  }
-  
-  .nav a {
-    font-weight: 550;
-    font-size: 1.5rem;
-    position: relative;
-  }
-  
-  .nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: var(--accent-color);
-    transition: width 0.3s ease;
-  }
-  
-  .nav a:hover::after {
-    width: 100%;
-  }
-  
-  
-  @media (max-width: 768px) {
-    .header-container {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .nav {
-      margin-top: 16px;
-      width: 100%;
-    }
-    
-    .nav ul {
-      justify-content: center;
-    }
-    
-    .nav li:first-child {
-      margin-left: 0;
-    }
-    
-    .nav li {
-      margin-left: 24px;
-    }
-  } 
+}

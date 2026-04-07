@@ -1,451 +1,205 @@
-:root {
-    --third-color: #FF6B6B; /* New vibrant accent color */
-  }
-  
-  .about {
-    padding: 40px 0;
-  }
-  
+.about {
+  width: 100%;
+  padding: 40px 0;
+  align-self: flex-start;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.about-section {
+  margin-bottom: 60px;
+}
+
+.about-section:last-child {
+  margin-bottom: 0;
+}
+
+.about-section p {
+  margin: 0 0 16px;
+  line-height: 1.7;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+/* Git Log Timeline */
+.git-log {
+  margin-top: 20px;
+}
+
+.git-commit {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  margin-bottom: 8px;
+}
+
+.git-commit:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Graph visualization */
+.commit-graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20px;
+  flex-shrink: 0;
+  padding-top: 6px;
+}
+
+.commit-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  border: 2px solid var(--syntax-variable);
+  box-shadow: 0 0 8px rgba(74, 134, 232, 0.3);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.commit-line {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(to bottom, var(--accent-color), rgba(74, 134, 232, 0.2));
+  margin-top: -1px;
+}
+
+/* Commit content */
+.commit-content {
+  flex: 1;
+  font-family: 'Consolas', 'Monaco', monospace;
+  min-width: 0;
+}
+
+.commit-hash-line {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.commit-hash {
+  color: var(--syntax-function);
+  font-weight: 600;
+}
+
+.commit-refs {
+  color: var(--third-color);
+  font-size: 0.8rem;
+}
+
+.commit-meta {
+  font-size: 0.8rem;
+  color: rgba(224, 224, 224, 0.5);
+  margin-bottom: 2px;
+}
+
+.commit-message {
+  margin-top: 10px;
+  padding-left: 16px;
+  border-left: 2px solid rgba(255, 255, 255, 0.06);
+}
+
+.commit-message h3 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+  color: var(--white-color);
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.commit-company {
+  margin: 0 0 8px !important;
+  font-size: 0.9rem !important;
+}
+
+.commit-location {
+  color: rgba(224, 224, 224, 0.5);
+  font-size: 0.85rem;
+}
+
+.commit-description {
+  font-size: 0.88rem !important;
+  line-height: 1.6 !important;
+  color: var(--text-color);
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+/* Expandable details */
+.commit-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+  margin-top: 8px;
+}
+
+.details-visible {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.commit-diff-header {
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.commit-diff-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.commit-diff-list li {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  padding: 3px 0;
+  line-height: 1.5;
+}
+
+.diff-plus {
+  color: var(--syntax-comment);
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.commit-expand-hint {
+  font-size: 0.72rem;
+  color: rgba(224, 224, 224, 0.3);
+  margin-top: 8px;
+  transition: color 0.2s ease;
+}
+
+.git-commit:hover .commit-expand-hint {
+  color: rgba(224, 224, 224, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .about-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
   }
-  
-  .about h1 {
-    font-size: 3rem;
-    margin: 0 0 40px;
-    color: var(--white-color);
-    text-align: center;
-    position: relative;
-    display: inline-block;
+
+  .git-commit {
+    gap: 12px;
+    padding: 8px;
   }
-  
-  .about h1:after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, var(--accent-color), var(--third-color));
+
+  .commit-message h3 {
+    font-size: 1rem;
   }
-  
-  .about-section {
-    margin-bottom: 60px;
+
+  .commit-graph {
+    width: 16px;
   }
-  
-  .about-section:last-child {
-    margin-bottom: 0;
+
+  .commit-dot {
+    width: 10px;
+    height: 10px;
   }
-  
-  .about-section h2 {
-    font-size: 1.8rem;
-    margin: 0 0 16px;
-    color: var(--white-color);
-  }
-  
-  .about-section p {
-    margin: 0 0 16px;
-    line-height: 1.6;
-    color: var(--text-color);
-  }
-  
-  .education-item {
-    margin-bottom: 24px;
-  }
-  
-  .education-item h3 {
-    margin: 0 0 8px;
-    font-size: 1.4rem;
-    color: var(--white-color);
-  }
-  
-  .education-details {
-    font-weight: 500;
-    margin: 0 0 4px !important;
-  }
-  
-  .education-date {
-    opacity: 0.7;
-    margin: 0 0 16px !important;
-    font-size: 0.9rem;
-  }
-  
-  .about-section ul {
-    margin: 0;
-    padding-left: 24px;
-  }
-  
-  .about-section li {
-    margin-bottom: 8px;
-    color: var(--text-color);
-  }
-  
-  .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
-  }
-  
-  .skills-category h3 {
-    font-size: 1.2rem;
-    margin: 0 0 12px;
-    color: var(--white-color);
-  }
-  
-  /* Experience Styles */
-  .experience-item {
-    margin-bottom: 32px;
-    padding-bottom: 32px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .experience-item:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-  }
-  
-  .experience-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-  
-  .experience-header h3 {
-    margin: 0;
-    font-size: 1.4rem;
-    color: var(--white-color);
-  }
-  
-  .experience-date {
-    opacity: 0.7;
-    font-size: 0.9rem;
-  }
-  
-  .experience-company {
-    font-weight: 500;
-    color: var(--accent-color);
-    margin: 0 0 12px;
-  }
-  
-  .experience-item ul {
-    margin: 0;
-    padding-left: 24px;
-  }
-  
-  .experience-item li {
-    margin-bottom: 8px;
-    color: var(--text-color);
-    line-height: 1.5;
-  }
-  
-  /* Activity Styles */
-  .activity-item {
-    margin-bottom: 24px;
-  }
-  
-  .activity-item:last-child {
-    margin-bottom: 0;
-  }
-  
-  .activity-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-  
-  .activity-header h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: var(--white-color);
-  }
-  
-  .activity-date {
-    opacity: 0.7;
-    font-size: 0.9rem;
-  }
-  
-  .activity-role {
-    font-weight: 500;
-    color: var(--accent-color);
-    margin: 0 0 8px;
-  }
-  
-  .activity-description {
-    margin: 0;
-    line-height: 1.6;
-    color: var(--text-color);
-  }
-  
-  /* Timeline Styles */
-  .timeline {
-    position: relative;
-    padding-left: 40px;
-    margin-top: 30px;
-  }
-  
-  .timeline:before {
-    content: '';
-    position: absolute;
-    left: 10px;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: linear-gradient(to bottom, 
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.1)
-    );
-    opacity: 0.5;
-  }
-  
-  .timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-  }
-  
-  .timeline-item:last-child {
-    margin-bottom: 0;
-  }
-  
-  .timeline-dot {
-    position: absolute;
-    left: -40px;
-    top: 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--accent-color);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
-  }
-  
-  .timeline-date {
-    font-size: 0.9rem;
-    color: var(--third-color);
-    margin-bottom: 8px;
-    font-weight: 500;
-  }
-  
-  .timeline-content h3 {
-    margin: 0 0 8px;
-    font-size: 1.4rem;
-    color: var(--white-color);
-  }
-  
-  .timeline-location {
-    font-style: italic;
-    opacity: 0.8;
-    margin-bottom: 12px;
-  }
-  
-  .timeline-content p {
-    margin: 0 0 12px;
-    line-height: 1.6;
-  }
-  
-  .timeline-description {
-    color: var(--text-color);
-    line-height: 1.6;
-    margin: 0;
-    font-size: 0.95rem;
-  }
-  
-  .timeline-content ul {
-    margin: 0;
-    padding-left: 20px;
-  }
-  
-  .timeline-content li {
-    margin-bottom: 8px;
-    line-height: 1.5;
-  }
-  
-  /* Skills Grid Styles */
-  .skills-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 20px;
-  }
-  
-  .skill-category {
-    background-color: rgba(255, 255, 255, 0.03);
-    border-radius: 8px;
-    padding: 20px;
-  }
-  
-  .skill-tag {
-    display: inline-block;
-    background: linear-gradient(to right, var(--accent-color), var(--third-color));
-    color: var(--white-color);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin-bottom: 16px;
-  }
-  
-  .skill-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .skill-items span {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: var(--text-color);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    transition: all 0.2s;
-  }
-  
-  .skill-items span:hover {
-    background-color: rgba(255, 107, 107, 0.1);
-    transform: translateY(-2px);
-    color: var(--white-color);
-  }
-  
-  /* Contact Info Styles */
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .contact-link {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.2s;
-    display: flex;
-    align-items: center;
-  }
-  
-  .contact-link:hover {
-    color: var(--third-color);
-  }
-  
-  .contact-icon {
-    margin-right: 10px;
-    font-style: normal;
-  }
-  
-  .contact-info p {
-    display: flex;
-    align-items: center;
-    margin: 0;
-  }
-  
-  /* Timeline Header with Logo */
-  .timeline-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-  
-  .company-logo {
-    width: 80px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 15px;
-    border-radius: 6px;
-    padding: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .company-logo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.2);
-  }
-  
-  .company-logo img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-  
-  /* Adjust timeline content for logo layout */
-  .timeline-content h3 {
-    margin: 0;
-    font-size: 1.4rem;
-    color: var(--white-color);
-  }
-  
-  /* Contact Links Styling */
-  
-  /* Responsive styling */
-  @media (max-width: 768px) {
-    .about-container {
-      padding: 0 20px;
-    }
-    
-    .about h1 {
-      font-size: 2.2rem;
-    }
-    
-    .about-section h2 {
-      font-size: 1.5rem;
-    }
-    
-    .timeline {
-      padding-left: 30px;
-    }
-    
-    .timeline-dot {
-      left: -30px;
-      width: 12px;
-      height: 12px;
-    }
-    
-    .timeline-content h3 {
-      font-size: 1.2rem;
-    }
-    
-    .function-block {
-      padding-left: 15px;
-    }
-    
-    .function-name {
-      font-size: 1.4rem;
-    }
-    
-    .function-content {
-      padding-left: 10px;
-    }
-    
-    .function-end {
-      font-size: 1.4rem;
-    }
-    
-    .timeline-header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    
-    .company-logo {
-      margin-left: 0;
-      margin-top: 10px;
-      width: 70px;
-      height: 35px;
-    }
-    
-    .contact-links {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-    
-    .contact-link {
-      width: 100%;
-      max-width: 300px;
-    }
-  } 
+}
