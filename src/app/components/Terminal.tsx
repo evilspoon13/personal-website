@@ -42,7 +42,7 @@ const COMMANDS: Record<string, () => string[]> = {
     '└─────────────┴──────────────────────────────────────────────┘',
   ],
   ls: () => [
-    'about.tsx    projects.tsx    resume.pdf',
+    'home.tsx    about.tsx    projects.tsx',
   ],
   contact: () => [
     'Email:    cameron28202@gmail.com',
