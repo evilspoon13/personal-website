@@ -56,7 +56,7 @@ const CodeBackground: React.FC = () => {
     if (!ctx) return;
 
     let animationId: number;
-    let snippets: Snippet[] = [];
+    const snippets: Snippet[] = [];
 
     const resize = () => {
       canvas.width = window.innerWidth;
