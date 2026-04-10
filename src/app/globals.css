@@ -6,33 +6,32 @@
 }
 
 :root {
-  --background-color: #1e1e1e;
-  --text-color: #e0e0e0;
+  --background-color: #111111;
+  --text-color: #a0a0a0;
   --accent-color: #4a86e8;
-  --third-color: #FF6B6B;
-  --white-color: #ffffff;
+  --white-color: #d0d0d0;
   --fade-in-duration: 0.8s;
 
-  /* VS Code palette */
-  --editor-bg: #1e1e1e;
-  --sidebar-bg: #252526;
-  --tab-active-bg: #1e1e1e;
-  --tab-inactive-bg: #2d2d2d;
-  --tab-border: #1e1e1e;
-  --status-bar-bg: #007acc;
-  --titlebar-bg: #323233;
-  --line-number-color: #858585;
-  --breadcrumb-color: #969696;
+  /* Layout */
+  --editor-bg: #111111;
+  --sidebar-bg: #161616;
+  --tab-active-bg: #111111;
+  --tab-inactive-bg: #1a1a1a;
+  --tab-border: #111111;
+  --status-bar-bg: #161616;
+  --titlebar-bg: #1a1a1a;
+  --line-number-color: #444;
+  --breadcrumb-color: #555;
 
-  /* Syntax highlighting */
-  --syntax-keyword: #c586c0;
-  --syntax-string: #ce9178;
-  --syntax-comment: #6a9955;
-  --syntax-function: #dcdcaa;
-  --syntax-variable: #9cdcfe;
-  --syntax-type: #4ec9b0;
-  --syntax-number: #b5cea8;
-  --syntax-punctuation: #d4d4d4;
+  /* Simplified syntax — monochrome + accent */
+  --syntax-keyword: #6a9fd8;
+  --syntax-string: #888;
+  --syntax-comment: #555;
+  --syntax-function: #c0c0c0;
+  --syntax-variable: #999;
+  --syntax-type: #6a9fd8;
+  --syntax-number: #999;
+  --syntax-punctuation: #666;
 }
 
 html,
@@ -89,13 +88,13 @@ a:hover {
   color: var(--accent-color);
 }
 
-/* Links with third color */
+/* Links with accent color */
 .third-color-link {
-  color: var(--third-color);
+  color: var(--accent-color);
 }
 
 .third-color-link:hover {
-  color: var(--third-color);
+  color: var(--accent-color);
   opacity: 0.8;
 }
 

@@ -34,10 +34,11 @@ const COMMANDS: Record<string, () => string[]> = {
   skills: () => [
     '┌─────────────┬──────────────────────────────────────────────┐',
     '│ Languages   │ C/C++, TypeScript, Python, Java              │',
-    '│ Frontend    │ React, Next.js, HTML/CSS                     │',
-    '│ Backend     │ Spring Boot, Node.js, PostgreSQL             │',
+    '│ Frontend    │ React, Next.js, Angular, HTML/CSS            │',
+    '│ Backend     │ Spring Boot, Node.js, PostgreSQL, Flask      │',
     '│ Embedded    │ STM32, CAN, UART, SPI, I2C                   │',
-    '│ Cloud/Tools │ AWS, Firebase, Git, Docker                   │',
+    '│ Cloud/Tools │ AWS, Firebase, Git, Docker, Redis, RabbitMQ  |',
+    '|             │ Kafka, Linux                                 │',
     '└─────────────┴──────────────────────────────────────────────┘',
   ],
   ls: () => [
@@ -58,6 +59,10 @@ const AUTO_SEQUENCE: { cmd: string; output: string[] }[] = [
   {
     cmd: 'cat status.txt',
     output: ['Software Engineer | T-Mobile SWE Intern'],
+  },
+  {
+    cmd: 'contact',
+    output: COMMANDS.contact(),
   },
   {
     cmd: 'help',

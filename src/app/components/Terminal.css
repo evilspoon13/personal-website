@@ -1,11 +1,11 @@
 .terminal {
   width: 100%;
-  max-width: 700px;
+  max-width: 750px;
   border-radius: 10px;
   overflow: hidden;
-  background: #0d1117;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(74, 134, 232, 0.05);
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   cursor: text;
 }
 
@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   height: 36px;
-  background: #161b22;
+  background: #111;
   padding: 0 14px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -30,9 +30,9 @@
   border-radius: 50%;
 }
 
-.dot-red { background: #ff5f57; }
-.dot-yellow { background: #febc2e; }
-.dot-green { background: #28c840; }
+.dot-red { background: #555; }
+.dot-yellow { background: #444; }
+.dot-green { background: #333; }
 
 .terminal-title {
   flex: 1;
@@ -52,8 +52,8 @@
   font-family: 'Consolas', 'Monaco', monospace;
   font-size: 0.85rem;
   line-height: 1.6;
-  max-height: 40vh;
-  min-height: 180px;
+  max-height: 55vh;
+  min-height: 250px;
   overflow-y: auto;
   scroll-behavior: smooth;
 }
@@ -79,7 +79,7 @@
 }
 
 .terminal-output {
-  color: rgba(230, 237, 243, 0.7);
+  color: rgba(200, 200, 200, 0.6);
 }
 
 .terminal-system {
@@ -89,16 +89,16 @@
 
 /* Prompt */
 .prompt-user {
-  color: #28c840;
+  color: var(--accent-color);
   font-weight: 600;
 }
 
 .prompt-separator {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .prompt-path {
-  color: #58a6ff;
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 600;
 }
 
@@ -162,8 +162,8 @@
   .terminal-body {
     font-size: 0.78rem;
     padding: 12px;
-    min-height: 150px;
-    max-height: 35vh;
+    min-height: 200px;
+    max-height: 50vh;
   }
 
   .terminal-hidden-input {

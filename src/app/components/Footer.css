@@ -4,12 +4,13 @@
   align-items: center;
   height: 24px;
   background: var(--status-bar-bg);
-  color: var(--white-color);
+  color: var(--text-color);
   font-family: 'Consolas', 'Monaco', monospace;
   font-size: 0.72rem;
   padding: 0 10px;
   flex-shrink: 0;
   z-index: 100;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .status-left,
@@ -27,12 +28,12 @@
   height: 24px;
   white-space: nowrap;
   transition: background 0.15s ease;
-  color: var(--white-color);
+  color: var(--text-color);
   text-decoration: none;
 }
 
 .status-item:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--white-color);
 }
 
