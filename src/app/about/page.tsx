@@ -4,7 +4,6 @@ import React, { useRef, useState } from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 import './About.css';
 import ConnectCard from '../components/ConnectCard';
-import SkillsTerminal from '../components/SkillsTerminal';
 
 const timelineData = [
   {
@@ -101,21 +100,6 @@ const About: React.FC = () => {
               tutorials so I could make fun mods and plugins for my friends and I to enjoy. Outside of work and school, I enjoy Brazilian Jiu Jitsu and working on
               open-source projects.
             </p>
-          </div>
-          <div className="function-end">
-            <span className="syntax-punctuation">{'}'}</span>
-          </div>
-        </section>
-
-        <section ref={skillsRef} className="about-section function-block scroll-fade">
-          <h2 className="function-name">
-            <span className="syntax-type">void</span>
-            <span className="syntax-punctuation">&nbsp;</span>
-            <span className="syntax-function">skills</span>
-            <span className="syntax-punctuation">{'() {'}</span>
-          </h2>
-          <div className="function-content">
-            <SkillsTerminal />
           </div>
           <div className="function-end">
             <span className="syntax-punctuation">{'}'}</span>
