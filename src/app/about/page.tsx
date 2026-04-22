@@ -14,11 +14,6 @@ const timelineData = [
     location: 'Bellevue, Washington',
     date: 'May 2025 - Present',
     description: 'Developing a full-stack web application to streamline emergency response and enhance communication with law enforcement. Extended internship through my final year of university, working part time remotely.',
-    details: [
-      'Built full-stack emergency response web application',
-      'Streamlined communication workflows with law enforcement',
-      'Extended to part-time remote during senior year',
-    ],
   },
   {
     hash: 'e91c4d8',
@@ -27,12 +22,7 @@ const timelineData = [
     company: 'Texas A&M Formula SAE Electric Racing',
     location: 'College Station, Texas',
     date: 'April 2025 - Present',
-    description: 'Developing embedded software for our electric vehicle, ensuring safety and reliability in intense racing conditions.',
-    details: [
-      'Developed embedded C on STM32 microcontrollers',
-      'Implemented CAN bus & UART communication protocols',
-      'Built distributed battery management for lithium-ion cells',
-    ],
+    description: 'Developing embedded software for our electric vehicle, primarily for our custom distributed battery management system, ensuring safety and reliability in intense racing conditions.',
   },
   {
     hash: '7b2f9a1',
@@ -42,11 +32,6 @@ const timelineData = [
     location: 'Houston, Texas',
     date: 'Aug 2024 - Dec 2024',
     description: 'Engineered industrial data management solutions and HMI screens for oil & gas facilities, improving operational efficiency and real-time visualization.',
-    details: [
-      'Engineered industrial data management solutions',
-      'Designed HMI screens for real-time facility monitoring',
-      'Improved operational efficiency for oil & gas clients',
-    ],
   },
   {
     hash: '3d5e8f2',
@@ -56,11 +41,7 @@ const timelineData = [
     location: 'France',
     date: 'Jun 2024 - Jul 2024',
     description: 'Researched and implemented machine learning algorithms for autonomous systems and computer vision applications.',
-    details: [
-      'Implemented ML algorithms for autonomous systems',
-      'Research in computer vision applications',
-    ],
-  },
+  }
 ];
 
 const About: React.FC = () => {
@@ -148,18 +129,6 @@ const About: React.FC = () => {
                         <span className="commit-location"> — {entry.location}</span>
                       </p>
                       <p className="commit-description">{entry.description}</p>
-                    </div>
-                    <div className={`commit-details ${expandedIndex === index ? 'details-visible' : ''}`}>
-                      <div className="commit-diff-header">
-                        <span className="syntax-comment">{'// Key contributions'}</span>
-                      </div>
-                      <ul className="commit-diff-list">
-                        {entry.details.map((detail, i) => (
-                          <li key={i}>
-                            <span className="diff-plus">+</span> {detail}
-                          </li>
-                        ))}
-                      </ul>
                     </div>
                   </div>
                 </div>
