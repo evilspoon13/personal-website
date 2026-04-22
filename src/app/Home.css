@@ -16,13 +16,23 @@
 
 /* Hero Section */
 .hero-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr auto;
   align-items: center;
   min-height: 70vh;
   padding: 40px 0;
-  gap: 16px;
+}
+
+.hero-terminal {
+  grid-row: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-connect {
+  grid-row: 4;
+  width: 100%;
 }
 
 /* Mobile */
@@ -30,5 +40,15 @@
   .hero-section {
     padding-top: 30px;
     min-height: 60vh;
+    grid-template-rows: auto auto;
+    row-gap: 32px;
+  }
+
+  .hero-terminal {
+    grid-row: 1;
+  }
+
+  .hero-connect {
+    grid-row: 2;
   }
 }

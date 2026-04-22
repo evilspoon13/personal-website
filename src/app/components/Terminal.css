@@ -1,6 +1,9 @@
 .terminal {
   width: 100%;
   max-width: 750px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
   border-radius: 10px;
   overflow: hidden;
   background: #0a0a0a;
@@ -48,14 +51,15 @@
 
 /* Terminal Body */
 .terminal-body {
+  flex: 1;
+  min-height: 0;
   padding: 16px;
   font-family: 'Consolas', 'Monaco', monospace;
   font-size: 0.85rem;
   line-height: 1.6;
-  max-height: 55vh;
-  min-height: 250px;
-  overflow-y: auto;
+  overflow-y: scroll;
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 .terminal-body::-webkit-scrollbar {
@@ -157,13 +161,12 @@
 @media (max-width: 768px) {
   .terminal {
     border-radius: 8px;
+    height: 360px;
   }
 
   .terminal-body {
     font-size: 0.78rem;
     padding: 12px;
-    min-height: 200px;
-    max-height: 50vh;
   }
 
   .terminal-hidden-input {
