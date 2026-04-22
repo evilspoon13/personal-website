@@ -31,7 +31,7 @@ const Projects: React.FC = () => {
       title: 'TRACK (Telemetry Rendering and Capture Kit)',
       description: 'Raspberry Pi-based telemetry platform for capturing CAN data, rendering a real-time onboard dashboard, and syncing configuration through a cloud-connected web interface. It combines low-latency shared-memory communication, a 60 FPS embedded display pipeline, and a React/Firebase configuration system for live telemetry monitoring.',
       technologies: ['C++', 'Python', 'React.js', 'TypeScript', 'Raspberry Pi', 'Firebase'],
-      image: '/globe.svg',
+      image: '/tracklogo.png',
       links: [{name: 'Embedded Repo', link: 'https://github.com/evilspoon13/track-embedded'}, {name: 'Web Repo', link: 'https://github.com/evilspoon13/track-web'}]
     },
         {

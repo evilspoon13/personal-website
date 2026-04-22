@@ -23,13 +23,13 @@ const timelineData = [
   {
     hash: 'e91c4d8',
     refs: 'origin/main',
-    title: 'Software Engineer',
+    title: 'Embedded Software Engineer',
     company: 'Texas A&M Formula SAE Electric Racing',
     location: 'College Station, Texas',
     date: 'April 2025 - Present',
-    description: 'Developing embedded software for a custom distributed battery management system, ensuring safety and reliability in intense racing conditions.',
+    description: 'Developing embedded software for our electric vehicle, ensuring safety and reliability in intense racing conditions.',
     details: [
-      'Developed embedded C firmware for STM32 microcontroller',
+      'Developed embedded C on STM32 microcontrollers',
       'Implemented CAN bus & UART communication protocols',
       'Built distributed battery management for lithium-ion cells',
     ],
@@ -51,7 +51,7 @@ const timelineData = [
   {
     hash: '3d5e8f2',
     refs: '',
-    title: 'Machine Learning Research Intern',
+    title: 'Research Intern',
     company: 'University of Technology of Compiègne, Heudiasyc Lab',
     location: 'France',
     date: 'Jun 2024 - Jul 2024',
@@ -160,9 +160,6 @@ const About: React.FC = () => {
                           </li>
                         ))}
                       </ul>
-                    </div>
-                    <div className="commit-expand-hint">
-                      {expandedIndex === index ? '▲ collapse' : '▼ expand details'}
                     </div>
                   </div>
                 </div>
